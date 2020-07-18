@@ -38,7 +38,10 @@ class Product extends Model implements HasMediaContract
         'active',
     ];
 
-    protected $appends = ['image'];
+    protected $appends = [
+        'image',
+        'formatted_price',
+    ];
 
     protected $with = ['media'];
 
@@ -74,5 +77,10 @@ class Product extends Model implements HasMediaContract
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function getFormattedPriceAttribute()
+    {
+        return 'Rp' . number_format($this->price, 0, 0, '.');
     }
 }
