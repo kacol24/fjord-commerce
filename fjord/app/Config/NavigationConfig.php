@@ -50,7 +50,6 @@ class NavigationConfig extends Config
 
             $nav->group([
                 'title' => 'Products',
-                'icon'  => fa('archive'),
             ], [
                 $nav->preset('crud.product', [
                     'icon' => fa('archive'),
