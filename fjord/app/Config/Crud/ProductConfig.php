@@ -62,10 +62,13 @@ class ProductConfig extends CrudConfig
             $table->col('Name')
                   ->value('{name}');
             $table->col('Category')
-                  ->value('{category_id}');
+                  ->value('{category.name}');
             $table->col('Price')
-                  ->value('{price}');
+                  ->value('{formatted_price}');
         })
+             ->query(function ($query) {
+                 $query->with('category');
+             })
              ->sortByDefault('id.desc')
              ->search('name')
              ->sortBy([
