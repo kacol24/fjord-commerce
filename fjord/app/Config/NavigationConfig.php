@@ -46,16 +46,32 @@ class NavigationConfig extends Config
     public function main(Navigation $nav)
     {
         $nav->section([
-            $nav->title('Pages'),
+            $nav->title('Master'),
 
             $nav->group([
-                'title' => 'Pages',
-                'icon'  => fa('file'),
+                'title' => 'Products',
+                'icon'  => fa('archive'),
             ], [
-                $nav->preset('form.pages.home', [
-                    'icon' => fa('home'),
+                $nav->preset('crud.product', [
+                    'icon' => fa('archive'),
+                ]),
+                $nav->preset('crud.category', [
+                    'icon' => fa('network-wired'),
                 ]),
             ]),
         ]);
+
+        //$nav->section([
+        //    $nav->title('Pages'),
+        //
+        //    $nav->group([
+        //        'title' => 'Pages',
+        //        'icon'  => fa('file'),
+        //    ], [
+        //        $nav->preset('form.pages.home', [
+        //            'icon' => fa('home'),
+        //        ]),
+        //    ]),
+        //]);
     }
 }
