@@ -155,7 +155,7 @@ return [
     'forms' => [
         'pages' => [
             // Should Pages be translatable by default.
-            'translatable' => true,
+            'translatable' => false,
             'route_prefix' => 'pages',
         ],
         'settings' => [
