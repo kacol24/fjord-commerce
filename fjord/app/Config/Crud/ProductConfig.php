@@ -2,6 +2,7 @@
 
 namespace FjordApp\Config\Crud;
 
+use App\Models\Category;
 use App\Models\Product;
 use Fjord\Crud\Config\CrudConfig;
 use Fjord\Crud\CrudIndex;
@@ -97,11 +98,11 @@ class ProductConfig extends CrudConfig
             $form->group(function ($form) {
                 $form->input('name')
                      ->title('Item name');
-                $form->relation('category')
+                $form->select('category_id')
                      ->title('Category')
-                     ->preview(function ($table) {
-                         $table->col('name');
-                     });
+                     ->options(
+                         Category::find(1)->children->pluck('name', 'id')->toArray()
+                     );
             })
                  ->width(9);
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Fjord\Crud\Models\FormListItem;
 use Fjord\Crud\Models\Traits\HasMedia;
 use Fjord\Crud\Models\Traits\Sluggable;
 use Fjord\Crud\Models\Traits\TrackEdits;
@@ -76,7 +77,7 @@ class Product extends Model implements HasMediaContract
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(FormListItem::class, 'category_id');
     }
 
     public function getFormattedPriceAttribute()

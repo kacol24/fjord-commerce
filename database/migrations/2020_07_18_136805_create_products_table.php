@@ -47,8 +47,6 @@ class CreateProductsTable extends Migration
 
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('category_id')->references('id')->on('categories');
         });
 
         $this->upPermissions();

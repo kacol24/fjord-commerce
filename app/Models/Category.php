@@ -46,4 +46,9 @@ class Category extends Model
     {
         return $this->hasMany(Product::class)->orderBy('order_column');
     }
+
+    public function children()
+    {
+        return $this->listItems('children');
+    }
 }

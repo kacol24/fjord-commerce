@@ -62,13 +62,7 @@ class CategoryConfig extends CrudConfig
             $table->col('Name')
                   ->value('{name}')
                   ->sortBy('name');
-
-            $table->col('Products')
-                  ->value('{products_count}');
         })
-             ->query(function ($query) {
-                 $query->withCount('products');
-             })
              ->sortByDefault('id.desc')
              ->search('name')
              ->sortBy([
@@ -89,12 +83,19 @@ class CategoryConfig extends CrudConfig
         $page->card(function ($form) {
             $form->input('name')
                  ->title('Name');
-            $form->relation('products')
-                 ->title('Products')
-                 ->sortable()
-                 ->preview(function ($table) {
-                     $table->col('name');
+            $form->list('children')
+                 ->title('Categories')
+                 ->previewTitle('{name}')
+                 ->form(function ($form) {
+                     $form->input('name')
+                          ->title('Name');
                  });
+            //$form->relation('products')
+            //     ->title('Products')
+            //     ->sortable()
+            //     ->preview(function ($table) {
+            //         $table->col('name');
+            //     });
         });
     }
 }
