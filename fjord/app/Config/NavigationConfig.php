@@ -48,15 +48,11 @@ class NavigationConfig extends Config
         $nav->section([
             $nav->title('Master'),
 
-            $nav->group([
-                'title' => 'Products',
-            ], [
-                $nav->preset('crud.product', [
-                    'icon' => fa('archive'),
-                ]),
-                $nav->preset('crud.category', [
-                    'icon' => fa('network-wired'),
-                ]),
+            $nav->preset('crud.product', [
+                'icon' => fa('archive'),
+            ]),
+            $nav->preset('crud.category', [
+                'icon' => fa('network-wired'),
             ]),
         ]);
 
