@@ -114,27 +114,20 @@ class ProductConfig extends CrudConfig
                  ->type('number')
                  ->prepend('Rp')
                  ->width(6);
-            $form->modal('modal')
-                 ->title('Set Sale Price')
-                 ->name('Sale Price')
-                 ->form(function ($form) {
-                     $form->input('sale_price')
-                          ->title('Sale Price')
-                          ->type('number')
-                          ->prepend('Rp')
-                          ->width(12);
-
-                     $form->datetime('start_date')
-                          ->title('Start Date')
-                          ->onlyDate(false)
-                          ->formatted('LLL')
-                          ->width(6);
-                     $form->datetime('end_date')
-                          ->title('End Date')
-                          ->onlyDate(false)
-                          ->formatted('LLL')
-                          ->width(6);
-                 })
+            $form->input('sale_price')
+                 ->title('Sale Price')
+                 ->type('number')
+                 ->prepend('Rp')
+                 ->width(6);
+            $form->datetime('start_date')
+                 ->title('Sale Start')
+                 ->onlyDate(false)
+                 ->formatted('LLL')
+                 ->width(6);
+            $form->datetime('end_date')
+                 ->title('Sale End')
+                 ->onlyDate(false)
+                 ->formatted('LLL')
                  ->width(6);
         });
     }
