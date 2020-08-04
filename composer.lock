@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cdeec98f498ba5b7feb1391880db211",
+    "content-hash": "21a69e35be929ca8e3df57948bbd6c28",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -203,6 +203,45 @@
             ],
             "description": "Laravel Content-Administration",
             "time": "2020-07-30T10:00:40+00:00"
+        },
+        {
+            "name": "aw-studio/fjord-pages",
+            "version": "v0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aw-studio/fjord-pages.git",
+                "reference": "86f8997a3f96a0f5d05470be5456b814a341d2bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aw-studio/fjord-pages/zipball/86f8997a3f96a0f5d05470be5456b814a341d2bf",
+                "reference": "86f8997a3f96a0f5d05470be5456b814a341d2bf",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "FjordPages\\FjordPagesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FjordPages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lennart Carstens-Behrens",
+                    "email": "lennart.carbe@gmail.com"
+                }
+            ],
+            "time": "2020-07-03T09:26:46+00:00"
         },
         {
             "name": "brick/math",

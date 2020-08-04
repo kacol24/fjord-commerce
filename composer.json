@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2.5",
         "aw-studio/fjord": "^2.4",
+        "aw-studio/fjord-pages": "^0.0.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
